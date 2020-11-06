@@ -20,6 +20,7 @@ public class PlayerBehavior : MonoBehaviour
     public Sprite m_leftSprite = null;
     public Sprite m_rightSprite = null;
     public Sprite m_backSprite = null;
+    public Animator animator;
 
     public GameObject m_fireBall = null; // Object the player can shoot
 
@@ -64,6 +65,10 @@ public class PlayerBehavior : MonoBehaviour
         Vector2 newPos = new Vector2(transform.position.x + horizontalOffset * m_speed,
                                      transform.position.y + verticalOffset * m_speed);
         m_rb2D.MovePosition(newPos);
+        animator.SetFloat("Speed", verticalOffset);
+        animator.SetFloat("SpeedHorizontal", horizontalOffset );
+        animator.SetInteger("SpeedHorizontal 0", Mathf.RoundToInt(horizontalOffset));
+        animator.SetInteger("Speed 0", Mathf.RoundToInt(verticalOffset));
 
         // Computes the player main direction (North, Sound, East, West)
         if (Mathf.Abs(horizontalOffset) > Mathf.Abs(verticalOffset))
@@ -71,10 +76,18 @@ public class PlayerBehavior : MonoBehaviour
             if (horizontalOffset > 0)
             {
                 m_direction = CardinalDirections.CARDINAL_E;
+                    animator.SetBool("isRight", true);
+                    animator.SetBool("isFront", false);
+                    animator.SetBool("isBack", false);
+                    animator.SetBool("isLeft", false);
             }
             else
             {
                 m_direction = CardinalDirections.CARDINAL_W;
+                animator.SetBool("isLeft", true);
+                animator.SetBool("isFront", false);
+                animator.SetBool("isBack", false);
+                animator.SetBool("isRight", false);
             }
         }
         else if (Mathf.Abs(horizontalOffset) < Mathf.Abs(verticalOffset))
@@ -82,10 +95,18 @@ public class PlayerBehavior : MonoBehaviour
             if (verticalOffset > 0)
             {
                 m_direction = CardinalDirections.CARDINAL_N;
+                animator.SetBool("isBack", true);
+                animator.SetBool("isFront", false);
+                animator.SetBool("isRight", false);
+                animator.SetBool("isLeft", false);
             }
             else
             {
                 m_direction = CardinalDirections.CARDINAL_S;
+                animator.SetBool("isFront", true);
+                animator.SetBool("isRight", false);
+                animator.SetBool("isBack", false);
+                animator.SetBool("isLeft", false);
             }
         }
     }
