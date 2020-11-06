@@ -7,7 +7,6 @@ using UnityEngine;
 // one is enabled ; and the map indication is updated accordingly
 public class Death : MonoBehaviour
 {
-    public GameObject m_teleportTo = null;
 
     private GameObject m_player = null;
 
@@ -29,6 +28,6 @@ public class Death : MonoBehaviour
     private void KillPlayer()
     {
 
-        Debug.Log("Hello: " + gameObject.name);
+        Debug.Log("Hello");
     }
 }
