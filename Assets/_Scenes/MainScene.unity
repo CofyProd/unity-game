@@ -18392,7 +18392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 804048079}
   m_Layer: 0
-  m_Name: Police
+  m_Name: Police1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18406,11 +18406,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804048078}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 410.7117, y: -107.87426, z: -1203.0265}
+  m_LocalPosition: {x: 347.2, y: -164.2, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2000406004}
-  - {fileID: 1508690753}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18614,6 +18613,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1109725268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1109725269}
+  m_Layer: 0
+  m_Name: Police2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1109725269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109725268}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 499.3, y: -184.8, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1508690753}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1154804757
 GameObject:
@@ -18900,7 +18930,6 @@ GameObject:
   - component: {fileID: 1360299691}
   - component: {fileID: 1360299694}
   - component: {fileID: 1360299693}
-  - component: {fileID: 1360299692}
   m_Layer: 0
   m_Name: lumiere torche
   m_TagString: Police
@@ -18916,24 +18945,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360299690}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.001, y: -0.058, z: 1203.0265}
+  m_LocalPosition: {x: 0.001, y: -0.058, z: 1}
   m_LocalScale: {x: 10, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 1508690753}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &1360299692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360299690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 154c183bc968cb84297a39abb0653357, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!60 &1360299693
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -27104,7 +27121,6 @@ GameObject:
   - component: {fileID: 1508690757}
   - component: {fileID: 1508690756}
   - component: {fileID: 1508690755}
-  - component: {fileID: 1508690754}
   m_Layer: 0
   m_Name: Police02
   m_TagString: Police
@@ -27120,25 +27136,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508690752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 89.5, y: -81.299995, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1360299691}
-  m_Father: {fileID: 804048079}
-  m_RootOrder: 1
+  m_Father: {fileID: 1109725269}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1508690754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508690752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 154c183bc968cb84297a39abb0653357, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1508690755
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27775,7 +27779,6 @@ GameObject:
   - component: {fileID: 1824111133}
   - component: {fileID: 1824111134}
   - component: {fileID: 1824111135}
-  - component: {fileID: 1824111136}
   m_Layer: 0
   m_Name: lumiere torche
   m_TagString: Police
@@ -27791,7 +27794,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824111132}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.001, y: -0.058, z: 1203.0265}
+  m_LocalPosition: {x: 0.001, y: -0.058, z: 1}
   m_LocalScale: {x: 10, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 2000406004}
@@ -27874,18 +27877,6 @@ PolygonCollider2D:
     - - {x: -0.018795831, y: -0.16679357}
       - {x: 1.18, y: 2.3899999}
       - {x: -1.16, y: 2.3899999}
---- !u!114 &1824111136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1824111132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 154c183bc968cb84297a39abb0653357, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1852039531
 GameObject:
   m_ObjectHideFlags: 0
@@ -28338,10 +28329,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2000406004}
-  - component: {fileID: 2000406006}
   - component: {fileID: 2000406005}
   - component: {fileID: 2000406008}
-  - component: {fileID: 2000406007}
+  - component: {fileID: 2000406006}
   m_Layer: 0
   m_Name: Police01
   m_TagString: Police
@@ -28357,7 +28347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000406003}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -64.7, y: -54.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1824111133}
@@ -28418,33 +28408,21 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 250101475
-  m_SortingLayer: 3
+  m_SortingLayerID: -542466337
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6033786567998653822, guid: 5abbbd2e8a25b7b4381659d7d4653819,
+  m_Sprite: {fileID: 3041494429396184457, guid: 5abbbd2e8a25b7b4381659d7d4653819,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.14, y: 0.21}
+  m_Size: {x: 14, y: 21}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2000406007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000406003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 154c183bc968cb84297a39abb0653357, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &2000406008
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28463,7 +28441,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 14, y: 21}
-    newSize: {x: 0.14, y: 0.21}
+    newSize: {x: 14, y: 21}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
