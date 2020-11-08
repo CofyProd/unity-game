@@ -215,6 +215,10 @@ public class PlayerBehavior : MonoBehaviour
                 m_dialogDisplayer.SetDialog(instantDialog.GetDialog());
             }
         }
+        else if (collision.tag == "Police")
+        {
+            Debug.Log("Afficher Death Screen");
+        }
     }
 
     // This is automatically called by Unity when the gameObject (here the player)
