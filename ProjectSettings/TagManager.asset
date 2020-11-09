@@ -9,6 +9,8 @@ TagManager:
   - InstantDialog
   - Fireball
   - Police
+  - entree ville
+  - entree montagne
   layers:
   - Default
   - TransparentFX

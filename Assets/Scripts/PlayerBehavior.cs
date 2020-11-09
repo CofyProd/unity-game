@@ -24,10 +24,12 @@ public class PlayerBehavior : MonoBehaviour
     public Sprite m_rightSprite = null;
     public Sprite m_backSprite = null;
     public Animator animator;
-    public AudioSource audio1;
-    public AudioClip clip;
-
-    public GameObject m_fireBall = null; // Object the player can shoot
+    public AudioSource pas_herbe;
+    public AudioSource pas_beton;
+    private AudioSource player;
+    public AudioSource sortie_camp;
+    public AudioSource ville;
+    public AudioSource montagne;
 
     public GameObject m_map = null;
     public DialogManager m_dialogDisplayer;
@@ -39,9 +41,9 @@ public class PlayerBehavior : MonoBehaviour
 
     void Awake()
     {
+        player = pas_herbe;
         m_rb2D = gameObject.GetComponent<Rigidbody2D>();
         m_renderer = gameObject.GetComponent<SpriteRenderer>();
-
         m_closestNPCDialog = null;
     }
 
@@ -157,12 +159,12 @@ public class PlayerBehavior : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
         {
-            audio1.Play();
+            player.Play();
         }
         else if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
         {if (!(Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)))
         {
-            audio1.Stop();
+            player.Stop();
         }
             
         }
@@ -233,6 +235,21 @@ public class PlayerBehavior : MonoBehaviour
         else if (collision.tag == "InstantDialog")
         {
             Destroy(collision.gameObject);
+        }
+        else if (collision.tag == "entree ville")
+        {
+            player = pas_beton;
+            pas_herbe.Stop();
+            sortie_camp.Stop();
+            ville.Play();
+
+        }
+        else if (collision.tag == "entree montagne")
+        {
+            ville.Stop();
+            montagne.Play();
+            player = pas_herbe;
+            pas_beton.Stop();
         }
     }
 }
