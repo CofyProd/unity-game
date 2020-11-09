@@ -7,12 +7,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Represents the cardinal directions (South, North, West, East)
 public enum CardinalDirections { CARDINAL_S, CARDINAL_N, CARDINAL_W, CARDINAL_E };
 
 public class PlayerBehavior : MonoBehaviour
 {
+    public Death DeathScript;
+
     public float m_speed = 1f; // Speed of the player when he moves
     private CardinalDirections m_direction; // Current facing direction of the player
 
@@ -66,7 +69,7 @@ public class PlayerBehavior : MonoBehaviour
                                      transform.position.y + verticalOffset * m_speed);
         m_rb2D.MovePosition(newPos);
         animator.SetFloat("Speed", verticalOffset);
-        animator.SetFloat("SpeedHorizontal", horizontalOffset );
+        animator.SetFloat("SpeedHorizontal", horizontalOffset);
         animator.SetInteger("SpeedHorizontal 0", Mathf.RoundToInt(horizontalOffset));
         animator.SetInteger("Speed 0", Mathf.RoundToInt(verticalOffset));
 
@@ -76,10 +79,10 @@ public class PlayerBehavior : MonoBehaviour
             if (horizontalOffset > 0)
             {
                 m_direction = CardinalDirections.CARDINAL_E;
-                    animator.SetBool("isRight", true);
-                    animator.SetBool("isFront", false);
-                    animator.SetBool("isBack", false);
-                    animator.SetBool("isLeft", false);
+                animator.SetBool("isRight", true);
+                animator.SetBool("isFront", false);
+                animator.SetBool("isBack", false);
+                animator.SetBool("isLeft", false);
             }
             else
             {
@@ -149,7 +152,7 @@ public class PlayerBehavior : MonoBehaviour
             {
                 m_dialogDisplayer.SetDialog(m_closestNPCDialog.GetDialog());
             }
-            else 
+            else
             {
                 ShootFireball();
             }
@@ -217,6 +220,8 @@ public class PlayerBehavior : MonoBehaviour
         }
         else if (collision.tag == "Police")
         {
+            // DeathScript.KillPlayer();
+            SceneManager.LoadScene(2); // GameOver
             Debug.Log("Afficher Death Screen");
         }
     }

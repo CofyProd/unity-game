@@ -26,9 +26,11 @@ public class Death : MonoBehaviour
 
     }
 
-    private void KillPlayer()
+    public void KillPlayer()
     {
-        SceneManager.LoadScene(2); // GameOver
         Debug.Log("Hello");
+        // SceneManager.LoadScene(2); // GameOver
+        // Debug.Log(SceneManager.sceneCount);
+        // SceneManager.LoadScene(2); // GameOver
     }
 }
