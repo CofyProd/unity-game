@@ -24,7 +24,7 @@ public class PlayerBehavior : MonoBehaviour
     public Sprite m_rightSprite = null;
     public Sprite m_backSprite = null;
     public Animator animator;
-    public AudioSource audio;
+    public AudioSource audio1;
     public AudioClip clip;
 
     public GameObject m_fireBall = null; // Object the player can shoot
@@ -157,12 +157,12 @@ public class PlayerBehavior : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
         {
-            audio.Play();
+            audio1.Play();
         }
         else if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
-        {if (!Input.GetKey(KeyCode.UpArrow) || !Input.GetKey(KeyCode.DownArrow) || !Input.GetKey(KeyCode.LeftArrow) || !Input.GetKey(KeyCode.RightArrow))
+        {if (!(Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)))
         {
-            audio.Stop();
+            audio1.Stop();
         }
             
         }
@@ -187,22 +187,6 @@ public class PlayerBehavior : MonoBehaviour
         else if (m_direction == CardinalDirections.CARDINAL_W)
         {
             m_renderer.sprite = m_leftSprite;
-        }
-    }
-
-    // Creates a fireball, and launches it
-    private void ShootFireball()
-    {
-        GameObject newFireball = Instantiate(m_fireBall, this.transform) as GameObject;
-
-        FireBehavior fireBallBehavior = newFireball.GetComponent<FireBehavior>();
-
-        if (fireBallBehavior != null)
-        {
-            // Lauches the fireball upward
-            // (Vector2 represents a direction in x and y ;
-            // so Vector2(0f, 1f) is a direction of 0 in x and 1 in y (up)
-            fireBallBehavior.Launch(new Vector2(0f, 1f));
         }
     }
 
