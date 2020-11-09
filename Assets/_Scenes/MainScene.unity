@@ -4540,6 +4540,8 @@ MonoBehaviour:
   m_rightSprite: {fileID: 21300002, guid: 4d1812406f3cf724d9bf26e4afc9ef77, type: 3}
   m_backSprite: {fileID: 21300004, guid: 4d1812406f3cf724d9bf26e4afc9ef77, type: 3}
   animator: {fileID: 274949972}
+  audio: {fileID: 1375410055}
+  clip: {fileID: 8300000, guid: 90a2558b147a2e84199d74fd2815e5ce, type: 3}
   m_fireBall: {fileID: 1502969918981896, guid: dd8b7b33984359b49a25a7c46d305262, type: 3}
   m_map: {fileID: 1634910905}
   m_dialogDisplayer: {fileID: 92778327}
@@ -36000,11 +36002,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 90a2558b147a2e84199d74fd2815e5ce, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
