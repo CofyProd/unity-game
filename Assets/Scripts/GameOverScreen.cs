@@ -8,11 +8,11 @@ public class GameOverScreen : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene(1);
     }
     public void GoHome()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(0);
     }
     // // Start is called before the first frame update
     // void Start()
