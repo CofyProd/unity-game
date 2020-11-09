@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // This class is used to teleport the player from one scene to another
 // If the scene is different, then the previous scene is disabled and the new
@@ -27,7 +28,7 @@ public class Death : MonoBehaviour
 
     private void KillPlayer()
     {
-
+        SceneManager.LoadScene("GameOver");
         Debug.Log("Hello");
     }
 }
