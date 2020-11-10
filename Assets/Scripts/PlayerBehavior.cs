@@ -30,6 +30,7 @@ public class PlayerBehavior : MonoBehaviour
     public AudioSource sortie_camp;
     public AudioSource ville;
     public AudioSource montagne;
+    public AudioSource bar;
 
     public GameObject m_map = null;
     public DialogManager m_dialogDisplayer;
@@ -242,6 +243,7 @@ public class PlayerBehavior : MonoBehaviour
             pas_herbe.Stop();
             sortie_camp.Stop();
             ville.Play();
+            bar.Stop();
 
         }
         else if (collision.tag == "entree montagne")
@@ -250,6 +252,13 @@ public class PlayerBehavior : MonoBehaviour
             montagne.Play();
             player = pas_herbe;
             pas_beton.Stop();
+        }
+        else if (collision.tag == "entree bar")
+        {
+            ville.Stop();
+            bar.Play();
+
+
         }
     }
 }

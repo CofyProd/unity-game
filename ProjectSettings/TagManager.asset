@@ -11,6 +11,7 @@ TagManager:
   - Police
   - entree ville
   - entree montagne
+  - entree bar
   layers:
   - Default
   - TransparentFX
