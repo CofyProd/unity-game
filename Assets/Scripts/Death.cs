@@ -28,8 +28,8 @@ public class Death : MonoBehaviour
 
     public void KillPlayer()
     {
-        Debug.Log("Hello");
-        // SceneManager.LoadScene(2); // GameOver
+        // Debug.Log("Hello");
+        SceneManager.LoadScene(2); // GameOver
         // Debug.Log(SceneManager.sceneCount);
         // SceneManager.LoadScene(2); // GameOver
     }
