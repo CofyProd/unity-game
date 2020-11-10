@@ -257,8 +257,6 @@ public class PlayerBehavior : MonoBehaviour
         {
             ville.Stop();
             bar.Play();
-
-
         }
     }
 }
