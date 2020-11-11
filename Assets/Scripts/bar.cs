@@ -48,6 +48,9 @@ public class bar : MonoBehaviour
                 }
                 else{
                     dialog.SetActive(false);
+                    texte2.SetActive(false);
+                    texte3.SetActive(false);
+                    texte1.SetActive(false);
                 }
     }
     private void OnTriggerEnter2D(Collider2D collision)
