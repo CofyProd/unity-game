@@ -49,6 +49,7 @@ public class bar : MonoBehaviour
                     dialog.SetActive(true);
                     texte1.SetActive(true);
                     texte2.SetActive(false);
+                    texte3.SetActive(false);
                     once = 2;
                 }else if (once == 2)
                 {
@@ -56,6 +57,7 @@ public class bar : MonoBehaviour
                     animator2.SetBool("parle", false);
                     texte1.SetActive(false);
                     texte2.SetActive(true); 
+                    texte3.SetActive(false);
                     once = 3;
                 }else if (once == 3)
                 {
