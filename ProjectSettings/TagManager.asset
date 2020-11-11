@@ -12,6 +12,8 @@ TagManager:
   - entree ville
   - entree montagne
   - entree bar
+  - cactus1
+  - depart
   layers:
   - Default
   - TransparentFX

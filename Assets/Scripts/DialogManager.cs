@@ -21,26 +21,28 @@ public struct DialogPage
 public class DialogManager : MonoBehaviour {
 
     public Text m_renderText;
-    private List<DialogPage> m_dialogToDisplay;
+    public GameObject DialogPanel;
+    private bool activated = false;
+    // private List<DialogPage> m_dialogToDisplay;
 
-    void Awake () {
+    // void Awake () {
 
-    }
+    // }
 
     // Sets the dialog to be displayed
     public void SetDialog(List<DialogPage> dialogToAdd)
     {
-        m_dialogToDisplay = new List<DialogPage>(dialogToAdd);
+        // m_dialogToDisplay = new List<DialogPage>(dialogToAdd);
 
-        if (m_dialogToDisplay.Count > 0)
-        {
+        // if (m_dialogToDisplay.Count > 0)
+        // {
             if (m_renderText != null)
             {
                m_renderText.text = "";
             }
 
             this.gameObject.SetActive(true);
-        }
+        // }
     }
 	
 	// Update is called once per frame
@@ -51,21 +53,28 @@ public class DialogManager : MonoBehaviour {
         }
 
         // Displays the current page
-		if (m_dialogToDisplay.Count > 0)
-        {
-            m_renderText.text = m_dialogToDisplay[0].text;
-        } else
-        {
-            this.gameObject.SetActive(false);
-        }
+		// if (m_dialogToDisplay.Count > 0)
+        // {
+        //     m_renderText.text = m_dialogToDisplay[0].text;
+        // } else
+        // {
+        //     this.gameObject.SetActive(false);
+        // }
 
         // Removes the page when the player presses "space"
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || activated == true)
         {
-            m_dialogToDisplay.RemoveAt(0);
+           this.gameObject.SetActive(false);
+           Destroy(GameObject.FindWithTag("depart"));
         }
 	}
-
+private void OnTriggerEnter2D(Collider2D collision) {
+    if (collision.tag == "Player"){
+        Debug.Log("good");
+        DialogPanel.SetActive(true);
+        activated = true;
+    }
+}
     public bool IsOnScreen()
     {
         return this.gameObject.activeSelf;

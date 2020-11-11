@@ -36,6 +36,7 @@ public class PlayerBehavior : MonoBehaviour
     public DialogManager m_dialogDisplayer;
 
     private Dialog m_closestNPCDialog;
+    public GameObject depart;
 
     Rigidbody2D m_rb2D;
     SpriteRenderer m_renderer;
@@ -201,7 +202,7 @@ public class PlayerBehavior : MonoBehaviour
     // - the player is in an instantDialog zone, then he grabs the dialog information and
     //   displays it instantaneously
     private void OnTriggerEnter2D(Collider2D collision)
-    {
+    {  
         if (collision.tag == "NPC")
         {
             m_closestNPCDialog = collision.GetComponent<Dialog>();
