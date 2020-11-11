@@ -24,7 +24,7 @@ public class bar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+       Debug.Log(once);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -51,7 +51,8 @@ public class bar : MonoBehaviour
                     texte2.SetActive(false);
                     texte3.SetActive(false);
                     once = 2;
-                }else if (once == 2)
+                    return;
+                } if (once == 2)
                 {
                     animator.SetBool("parle", true);
                     animator2.SetBool("parle", false);
@@ -59,7 +60,8 @@ public class bar : MonoBehaviour
                     texte2.SetActive(true); 
                     texte3.SetActive(false);
                     once = 3;
-                }else if (once == 3)
+                    return;
+                }if (once == 3)
                 {
                     animator.SetBool("parle", false);
                     animator2.SetBool("parle", true);
@@ -67,8 +69,9 @@ public class bar : MonoBehaviour
                     texte2.SetActive(false); 
                     texte3.SetActive(true); 
                     once = 4;
+                    return;
                 }
-                else{
+                if (once == 4){
                     dialog.SetActive(false);
                     texte2.SetActive(false);
                     texte3.SetActive(false);
