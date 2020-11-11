@@ -16,9 +16,10 @@ public class bar : MonoBehaviour
     public Animator animator2;
 
 
+
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -36,32 +37,22 @@ public class bar : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collider)
     {
-        if (collider.tag == "Player")
-        {
+        // if (collider.tag == "Player")
+        // {
 
             if (Input.GetKeyDown(KeyCode.Space))
-            {
+            { 
                 message.SetActive(false);
-                 if (once == 1)
-                {   
-                    animator.SetBool("parle", true);
-                    animator2.SetBool("parle", false);
-                    dialog.SetActive(true);
-                    texte1.SetActive(true);
+                 
+                 
+                if (once == 4){
+                    dialog.SetActive(false);
                     texte2.SetActive(false);
                     texte3.SetActive(false);
-                    once = 2;
-                    return;
-                } if (once == 2)
-                {
-                    animator.SetBool("parle", true);
-                    animator2.SetBool("parle", false);
                     texte1.SetActive(false);
-                    texte2.SetActive(true); 
-                    texte3.SetActive(false);
-                    once = 3;
                     return;
-                }if (once == 3)
+                }
+                if (once == 3)
                 {
                     animator.SetBool("parle", false);
                     animator2.SetBool("parle", true);
@@ -71,15 +62,28 @@ public class bar : MonoBehaviour
                     once = 4;
                     return;
                 }
-                if (once == 4){
-                    dialog.SetActive(false);
+                if (once == 2)
+                {
+                    animator.SetBool("parle", true);
+                    animator2.SetBool("parle", false);
+                    texte1.SetActive(false);
+                    texte2.SetActive(true); 
+                    texte3.SetActive(false);
+                    once = 3;
+                    return;
+                }
+                if (once == 1)
+                {   
+                    animator.SetBool("parle", true);
+                    animator2.SetBool("parle", false);
+                    dialog.SetActive(true);
+                    texte1.SetActive(true);
                     texte2.SetActive(false);
                     texte3.SetActive(false);
-                    texte1.SetActive(false);
-                }
+                    once = 2;
+                    return;}
                 
-                
-            }
+            // }
         }
     }
     private void OnTriggerExit2D(Collider2D other)

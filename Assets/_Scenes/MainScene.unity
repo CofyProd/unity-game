@@ -10112,7 +10112,7 @@ MonoBehaviour:
     Je m'appelle Django et j\u2019ai 35 ans. La gestapo est venu chez moi pour nous
     emmener dans un camp de concentration. J\u2019ai reussi \xE0 cacher ma famille\u2026
     Un ami arriv\xE9 apr\xE8s moi au camp m\u2019a expliqu\xE9 que ma famille \xE9tait
-    en vie, dans un endroit s\xFBr et que je pouvais les retrouver. "
+    en vie, dans un endroit s\xFBr et que je pouvais les retrouver. 1/3 "
 --- !u!222 &550593097
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -50340,7 +50340,7 @@ MonoBehaviour:
   m_Text: "En effet il existe bien une horloge qui permet de retrouver qui on veut.
     Il suffit juste de penser tr\xE9s fort \xE0 cette personne. Cette objet l\xE9gendaire
     s'appelle Tac-Tic. Tu en trouveras un bout dans la chambre au sud de la ville
-    en haut des escaliers. Et un autre dans les montagne au nord. Bonne chance."
+    en haut des escaliers. Et un autre dans les montagne au nord. Bonne chance. 3/3"
 --- !u!222 &1517942944
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -52622,7 +52622,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641989930}
   m_LocalRotation: {x: -0.59692234, y: -0.8002905, z: -0.0042731646, w: -0.056573316}
-  m_LocalPosition: {x: 1168, y: 136, z: 0}
+  m_LocalPosition: {x: 1176, y: 136, z: 0}
   m_LocalScale: {x: 0.9860794, y: -2.5094166, z: 1}
   m_Children: []
   m_Father: {fileID: 1635656144}
@@ -56379,7 +56379,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "J\u2019ai r\xE9ussi avec difficult\xE9 \xE0 m\u2019\xE9chapper, quelqu'un
-    m'a dit qu'il existait dans le coin une horloge qui pourrait m'aider."
+    m'a dit qu'il existait dans le coin une horloge qui pourrait m'aider. 2/3"
 --- !u!222 &1857659692
 CanvasRenderer:
   m_ObjectHideFlags: 0
