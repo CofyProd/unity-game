@@ -5719,7 +5719,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 98e80e1fb0cebf14fb2995d0cebd0ffb, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.179
+  m_Volume: 0.103
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5812,16 +5812,17 @@ AudioSource:
   m_GameObject: {fileID: 274949966}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 20d8e2344b013774ea8bb98b9b07b59b,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: f5a020ce5f0bf3a428f70c2233b4830a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.096
+  m_Volume: 0.213
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -5908,10 +5909,11 @@ AudioSource:
   m_GameObject: {fileID: 274949966}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 20d8e2344b013774ea8bb98b9b07b59b,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 0e1ceab02b9975547b59d2d24cfcd845, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.648
+  m_Volume: 0.165
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9082,7 +9084,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Encore des gardes mieux vaut etre prudent. Je doit trouver l'entr\xE9e
+  m_Text: "Encore des gardes mieux vaut etre prudent. Je dois trouver l'entr\xE9e
     de la grotte que le barman m'a parl\xE9."
 --- !u!222 &474450481
 CanvasRenderer:
@@ -10177,7 +10179,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 7.100174, y: 0.6556244}
+  m_Offset: {x: 7.100174, y: 45.308987}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -10188,7 +10190,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 93.60361, y: 26.438278}
+  m_Size: {x: 93.60361, y: 115.745}
   m_EdgeRadius: 0
 --- !u!1 &561284595
 GameObject:
